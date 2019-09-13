@@ -5,5 +5,9 @@ export default {
     white
   },
 
-  text: {}
+  text: {},
+
+  omegaHotel: {
+    background: '#132129'
+  }
 };

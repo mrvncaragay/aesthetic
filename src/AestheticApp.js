@@ -1,7 +1,10 @@
 import React from 'react';
 
+// Shared Component
+import OmegaHotel from './views/OmegaHotel';
+
 const AestheticApp = () => {
-  return <div>Aesthetic App</div>;
+  return <OmegaHotel />;
 };
 
 export default AestheticApp;
