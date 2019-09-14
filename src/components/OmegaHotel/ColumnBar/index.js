@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { OmegaHotelContext } from '../../../context/omegaHotelContext';
+import { animated } from 'react-spring';
 
 // Shared component
 import { Bar } from './components';
@@ -6,16 +8,25 @@ import { Bar } from './components';
 // Component styles
 import styles from './styles';
 
-const ColumnBar = ({ props }) => {
-  const classes = styles(props);
+const ColumnBar = () => {
+  const classes = styles();
+  const { transitions } = useContext(OmegaHotelContext);
+
   return (
     <div className={classes.root}>
-      <Bar duration='1300' />
-      <Bar duration='1350' />
-      <Bar duration='1400' />
-      <Bar duration='1450' />
-      <Bar duration='1500' />
-      <Bar duration='1550' />
+      {transitions.map(({ height, props }, index) => (
+        <animated.div
+          className={classes.box}
+          key={index}
+          style={{ height }}
+        ></animated.div>
+      ))}
+      {/* <Bar pause={300} />
+      <Bar pause={330} />
+      <Bar pause={360} />
+      <Bar pause={390} />
+      <Bar pause={420} />
+      <Bar pause={450} /> */}
     </div>
   );
 };

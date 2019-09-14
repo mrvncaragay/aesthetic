@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Shared components
-import { ColumnBar } from '../../components/OmegaHotel';
+import OmegaHotelLayout from '../../components/OmegaHotel';
 
 // Component styles
 import styles from './styles';
@@ -11,7 +11,7 @@ const OmegaHotel = () => {
 
   return (
     <div className={classes.root}>
-      <ColumnBar />
+      <OmegaHotelLayout />
     </div>
   );
 };
