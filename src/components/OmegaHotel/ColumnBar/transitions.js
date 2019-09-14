@@ -5,9 +5,10 @@ import { easeExp } from 'd3-ease';
 
 export default () => {
   const columnBarRef = useRef();
-  const [bars] = useState(Array.from({ length: 6 }));
+  const [state] = useState(Array.from({ length: 6 }));
+  const [isAnimating, set] = useState(true);
 
-  const transitions = useTrail(bars.length, {
+  const trail = useTrail(state.length, {
     ref: columnBarRef,
     from: { height: '0%' },
     to: async next => {
@@ -15,9 +16,9 @@ export default () => {
       await delay(1000);
       await next({ height: '0%' });
     },
-
-    config: { duration: 1400, easing: easeExp }
+    config: { duration: 1400, easing: easeExp },
+    onRest: () => set(false)
   });
 
-  return [transitions, columnBarRef];
+  return [trail, columnBarRef, isAnimating];
 };

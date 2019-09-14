@@ -9,7 +9,7 @@ export default () => {
   const transitions = useTransition(texts, null, {
     ref: textRef,
     from: { top: '20px' },
-    enter: item => async (next, cancel) => {
+    enter: () => async next => {
       await next({ top: '0px' });
       await delay(100);
       await next({ top: '20px' });

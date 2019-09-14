@@ -6,6 +6,7 @@ export default makeStyles(theme => ({
     justifyContent: 'space-evenly',
     width: '180px',
     display: 'flex',
+    zIndex: 101,
     position: 'fixed',
     top: '50%',
     left: '50%',
@@ -16,7 +17,7 @@ export default makeStyles(theme => ({
     color: 'white',
     overflow: 'hidden',
     position: 'relative',
-    fontSize: '1.1rem',
+    fontSize: '0.8rem',
     fontWeight: 600
   }
 }));

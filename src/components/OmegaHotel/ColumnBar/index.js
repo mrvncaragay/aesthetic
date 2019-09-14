@@ -7,16 +7,13 @@ import styles from './styles';
 
 const ColumnBar = () => {
   const classes = styles();
-  const { barTransition } = useContext(IntroBarContext);
+
+  const { barTransition, isAnimating } = useContext(IntroBarContext);
 
   return (
-    <div className={classes.root}>
-      {barTransition.map(({ height, props }, index) => (
-        <animated.div
-          className={classes.box}
-          key={index}
-          style={{ height }}
-        ></animated.div>
+    <div className={`${classes.root} ${isAnimating && 'animate'}`}>
+      {barTransition.map(({ height }, index) => (
+        <animated.div className={classes.box} key={index} style={{ height }} />
       ))}
     </div>
   );
