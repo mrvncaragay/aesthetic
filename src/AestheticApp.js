@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Context
-import { OmegaHotelProvider } from './context/omegaHotelContext';
+import { OmegaHotelProvider } from './context/OmegaHotelContext';
 
 // Shared Component
 import OmegaHotel from './views/OmegaHotel';
