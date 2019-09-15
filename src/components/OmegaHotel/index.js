@@ -10,6 +10,8 @@ import { useChain } from 'react-spring';
 import ColumnBar from './ColumnBar';
 import IntroText from './IntroText';
 import Nav from './Nav';
+import Body from './Body';
+import Footer from './Footer';
 
 const OmegaHotel = () => {
   const { columnBarRef } = useContext(IntroBarContext);
@@ -21,6 +23,8 @@ const OmegaHotel = () => {
       {/* <ColumnBar />
       <IntroText /> */}
       <Nav />
+      <Body />
+      <Footer />
     </>
   );
 };

@@ -4,7 +4,6 @@ export default makeStyles(theme => ({
   root: {
     display: 'flex',
     alignItems: 'center',
-    height: '100px',
     padding: theme.spacing(6, 12, 6, 12),
     color: 'white'
   },
