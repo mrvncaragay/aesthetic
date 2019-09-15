@@ -3,48 +3,29 @@ import palette from './palette';
 export default {
   fontFamily: ['Raleway', 'Helvetica', 'sans-serif'].join(','),
 
-  h1: {
-    color: palette.text.primary,
-    fontWeight: '400',
-    fontSize: '35px',
-    letterSpacing: '-1.5px',
-    lineHeight: '40px',
-    textTransform: 'uppercase'
-  },
-
-  h2: {
-    color: palette.text.primary,
-    fontWeight: '400',
-    fontSize: '29px',
-    letterSpacing: '-0.5px',
-    lineHeight: '32px'
-  },
-
   h3: {
     color: palette.text.primary,
-    fontWeight: '400',
-    fontSize: '24px',
-    letterSpacing: '-1.5px',
-    lineHeight: '28px',
-    textAlign: 'center',
+    fontWeight: '500',
+    fontSize: '16px',
+    letterSpacing: '3px',
     textTransform: 'uppercase'
   },
 
   h4: {
     color: palette.text.primary,
-    fontWeight: '600',
-    fontSize: '20px',
-    letterSpacing: '-0.5px',
+    fontWeight: '500',
+    fontSize: '14px',
     lineHeight: '24px'
   },
+
   h5: {
-    color: palette.text.primary,
-    fontWeight: '600',
-    fontSize: '16px',
-    letterSpacing: '-0.5px',
-    lineHeight: '20px',
-    textTransform: 'uppercase'
+    fontWeight: '400',
+    fontSize: '12px',
+    color: palette.omegaHotel.main,
+    letterSpacing: '1px',
+    lineHeight: '28px'
   },
+
   h6: {
     color: palette.text.primary,
     fontWeight: '500',

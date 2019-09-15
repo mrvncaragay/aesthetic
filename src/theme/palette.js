@@ -8,6 +8,7 @@ export default {
   text: {},
 
   omegaHotel: {
+    main: '#6D909A',
     background: '#132129'
   }
 };

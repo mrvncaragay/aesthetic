@@ -9,11 +9,7 @@ export default makeStyles(theme => ({
   },
 
   title: {
-    flex: 1,
-    fontSize: '0.9rem',
-    fontWeight: 500,
-    letterSpacing: '3px',
-    textTransform: 'uppercase'
+    flex: 1
   },
 
   list: {
