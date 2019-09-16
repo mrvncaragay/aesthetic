@@ -18,7 +18,7 @@ const Nav = () => {
   useEffect(() => {
     setTimeout(() => {
       setAnimate(true);
-    }, 1000); //3300
+    }, 3300); //3300
   }, []);
 
   return (

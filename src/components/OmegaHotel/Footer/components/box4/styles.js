@@ -6,22 +6,22 @@ export default makeStyles(theme => ({
     flexDirection: 'column',
     justifyContent: 'center',
     height: '100%',
-    width: '18.4%'
+    width: '18.4%',
+    color: 'white'
   },
 
   title: {
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(1),
 
-    '& h4 ': {
-      position: 'relative',
-      marginRight: theme.spacing(0.7)
+    '& h5 ': {
+      position: 'relative'
     }
   },
 
   body: {
-    '& h5': {
+    '& h4': {
       position: 'relative',
-      lineHeight: '20px'
+      marginRight: theme.spacing(0.5)
     }
   }
 }));

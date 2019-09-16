@@ -4,7 +4,7 @@ export default {
   fontFamily: ['Raleway', 'Helvetica', 'sans-serif'].join(','),
 
   h3: {
-    color: palette.text.primary,
+    color: palette.common.white,
     fontWeight: '500',
     fontSize: '16px',
     letterSpacing: '3px',
@@ -12,7 +12,7 @@ export default {
   },
 
   h4: {
-    color: palette.text.primary,
+    color: palette.common.white,
     fontWeight: '500',
     fontSize: '14px',
     lineHeight: '24px'
@@ -27,7 +27,7 @@ export default {
   },
 
   h6: {
-    color: palette.text.primary,
+    color: palette.common.white,
     fontWeight: '500',
     fontSize: '14px',
     letterSpacing: '-0.05px',
@@ -35,7 +35,7 @@ export default {
   },
 
   subtitle1: {
-    color: palette.text.secondary,
+    color: palette.common.white,
     fontSize: '16px',
     letterSpacing: '-0.50px',
     lineHeight: '25px',

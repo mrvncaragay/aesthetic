@@ -14,7 +14,7 @@ export default makeStyles(theme => ({
   },
 
   box: {
-    width: '16.66666%',
+    width: '18.4%',
     backgroundColor: theme.palette.omegaHotel.background
   }
 }));

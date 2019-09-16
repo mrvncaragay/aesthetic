@@ -1,78 +1,41 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-// Material UI components
-import Fab from '@material-ui/core/Fab';
-import Typography from '@material-ui/core/Typography';
+// Shared components
+import { AnimateTypography, AnimateIcon, CircleWithNumber } from '../index';
 
 // Component styles
 import styles from './styles';
 
-const MyFab = ({ children, delay, ...props }) => {
-  const classes = styles(props);
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setAnimate(true);
-    }, delay); //3300
-  }, [delay]);
-
-  return (
-    <Fab
-      size='small'
-      aria-label='add'
-      {...props}
-      className={`${classes.fab} ${animate && 'animate'}`}
-    >
-      {children}
-    </Fab>
-  );
-};
-
 const Box3 = props => {
   const classes = styles(props);
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setAnimate(true);
-    }, 1300); //3300
-  }, []);
 
   return (
     <div className={classes.box}>
       <div className={classes.title}>
-        <Typography
-          className={classes.t1 + ` ${animate && 'animate'}`}
-          display='inline'
+        <AnimateTypography
+          effect='slideUp'
+          delay={1300}
+          text='Guests'
           variant='h5'
-        >
-          Guests
-        </Typography>
+        />
       </div>
 
       <div className={classes.body}>
-        <MyFab
-          color='black'
-          bgc='white'
-          delay={1400}
-          size='small'
-          aria-label='add'
-        >
-          1
-        </MyFab>
+        <AnimateIcon effect='slideUp' delay={1400}>
+          <CircleWithNumber variant='contained' text={1} />
+        </AnimateIcon>
 
-        <MyFab delay={1500} size='small' aria-label='add'>
-          2
-        </MyFab>
+        <AnimateIcon effect='slideUp' delay={1500}>
+          <CircleWithNumber text={2} />
+        </AnimateIcon>
 
-        <MyFab delay={1600} size='small' aria-label='add'>
-          3
-        </MyFab>
+        <AnimateIcon effect='slideUp' delay={1600}>
+          <CircleWithNumber text={3} />
+        </AnimateIcon>
 
-        <MyFab delay={1700} size='small' aria-label='add'>
-          4+
-        </MyFab>
+        <AnimateIcon effect='slideUp' delay={1600}>
+          <CircleWithNumber text='4+' />
+        </AnimateIcon>
       </div>
     </div>
   );

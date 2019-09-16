@@ -4,8 +4,8 @@ export default makeStyles(theme => ({
   root: {
     display: 'flex',
 
-    height: '10%',
+    height: '20%',
     backgroundColor: theme.palette.omegaHotel.background,
-    padding: theme.spacing(6, 12, 6, 12)
+    padding: theme.spacing(0, 0, 0, 12)
   }
 }));

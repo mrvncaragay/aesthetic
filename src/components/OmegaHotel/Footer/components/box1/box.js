@@ -1,58 +1,50 @@
-import React, { useState, useEffect } from 'react';
-
-// Material UI components
-import Typography from '@material-ui/core/Typography';
+import React, { useEffect } from 'react';
 
 // Component styles
 import styles from './styles';
 
+// Shared components
+import { AnimateTypography } from '../index';
+
 const Box1 = props => {
   const classes = styles(props);
-  const [animate, setAnimate] = useState(false);
-  const [animate2, setAnimate2] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setAnimate(true);
-    }, 1000); //3300
-
-    setTimeout(() => {
-      setAnimate2(true);
-    }, 1200); //3300
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div className={classes.box}>
       <div className={classes.title}>
-        <Typography
-          className={classes.t1 + ` ${animate && 'animate'}`}
+        <AnimateTypography
+          effect='slideUp'
+          text='Your'
+          delay={1200}
           display='inline'
           variant='h4'
-        >
-          Your
-        </Typography>
-        <Typography
-          className={classes.t2 + ` ${animate2 && 'animate'}`}
+        />
+
+        <AnimateTypography
+          effect='slideUp'
+          text='room'
+          delay={1400}
           display='inline'
           variant='h4'
-        >
-          room
-        </Typography>
+        />
       </div>
 
       <div className={classes.body}>
-        <Typography
+        <AnimateTypography
+          effect='slideUp'
+          text='Select the desired filters'
+          delay={1200}
           variant='h5'
-          className={classes.t1 + ` ${animate && 'animate'}`}
-        >
-          Select the desired filters
-        </Typography>
-        <Typography
+        />
+
+        <AnimateTypography
+          effect='slideUp'
+          text='and find out the price.'
+          delay={1400}
           variant='h5'
-          className={classes.t2 + ` ${animate2 && 'animate'}`}
-        >
-          and find out the price.
-        </Typography>
+        />
       </div>
     </div>
   );

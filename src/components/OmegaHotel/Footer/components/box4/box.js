@@ -9,7 +9,7 @@ import { AnimateTypography, AnimateIcon } from '../index';
 // Component styles
 import styles from './styles';
 
-const Box2 = props => {
+const Box4 = props => {
   const classes = styles(props);
 
   return (
@@ -17,7 +17,7 @@ const Box2 = props => {
       <div className={classes.title}>
         <AnimateTypography
           effect='slideUp'
-          text='Location'
+          text='Arrival and departure'
           delay={1400}
           variant='h5'
         />
@@ -26,13 +26,21 @@ const Box2 = props => {
       <div className={classes.body}>
         <AnimateTypography
           effect='slideUp'
-          text='Begin your journey'
+          text='09.20.19 -'
           delay={1400}
-          display='inline'
           variant='h4'
+          display='inline'
         />
 
-        <AnimateIcon effect='slideRight' delay={1400}>
+        <AnimateTypography
+          effect='slideUp'
+          text='09.25.19'
+          delay={1500}
+          variant='h4'
+          display='inline'
+        />
+
+        <AnimateIcon effect='slideRight' delay={1600}>
           <ArrowRight />
         </AnimateIcon>
       </div>
@@ -40,4 +48,4 @@ const Box2 = props => {
   );
 };
 
-export default Box2;
+export default Box4;

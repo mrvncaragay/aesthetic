@@ -3,8 +3,12 @@ import palette from '../palette';
 
 export default {
   root: {
-    backgroundColor: palette.common.white,
+    backgroundColor: palette.omegaHotel.background,
     color: palette.text.secondary,
-    '&:hover': {}
+    marginRight: '8px',
+    boxShadow: 'none',
+    '&:hover': {
+      color: 'black'
+    }
   }
 };
