@@ -15,7 +15,7 @@ const Div = ({ effect = '', className = '', children, delay, ...props }) => {
 
   return (
     <div
-      className={`${classes[effect]} ${className} ${animate ? ' animate' : ''}`}
+      className={`${classes[effect]} ${className} ${animate ? 'animate' : ''}`}
       {...props}
     >
       {children}

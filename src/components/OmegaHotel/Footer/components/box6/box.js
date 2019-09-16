@@ -17,17 +17,17 @@ const Box6 = props => {
   useEffect(() => {
     setTimeout(() => {
       setAnimate(true);
-    }, 1500); //3300
+    }, 4000); //3300
   }, []);
 
   return (
-    <Div effect='shrink' delay={3200} duration={300}>
+    <Div effect='shrink' delay={3200} duration={1000}>
       <div className={classes.title}>
         <AnimateTypography
           effect='slideUp'
           text='Book Now'
-          delay={3800}
-          duration={1000}
+          delay={4000}
+          duration={500}
           display='inline'
           variant='h3'
         />
@@ -42,14 +42,14 @@ const Box6 = props => {
         <AnimateTypography
           effect='slideUp'
           text='Price for room'
-          delay={3800}
+          delay={4000}
           variant='h5'
         />
 
         <AnimateTypography
           effect='slideUp'
           text='$800 - $900'
-          delay={4000}
+          delay={4200}
           variant='h5'
         />
       </div>

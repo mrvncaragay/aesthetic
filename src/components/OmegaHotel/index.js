@@ -12,6 +12,7 @@ import IntroText from './IntroText';
 import Nav from './Nav';
 import Body from './Body';
 import Footer from './Footer';
+import RectBar from './RectBar';
 
 const OmegaHotel = () => {
   const { columnBarRef } = useContext(IntroBarContext);
@@ -20,8 +21,10 @@ const OmegaHotel = () => {
   useChain([columnBarRef, textRef], [0, 0.5]);
   return (
     <>
-      <ColumnBar />
-      <IntroText />
+      <RectBar />
+
+      {/* <ColumnBar />
+      <IntroText />*/}
       <Nav />
       <Body />
       <Footer />
