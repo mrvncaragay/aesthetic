@@ -4,7 +4,7 @@ import React from 'react';
 import FilterList from '@material-ui/icons/FilterListOutlined';
 
 // Shared components
-import { AnimateIcon } from '../index';
+import AnimateIcon from '../../../Animations/Icon';
 
 // Component styles
 import styles from './styles';
@@ -14,7 +14,7 @@ const Box2 = props => {
 
   return (
     <div className={classes.box}>
-      <AnimateIcon effect='rotate' delay={1700} duration={1000}>
+      <AnimateIcon effect='rotate' delay={3800} duration={1000}>
         <FilterList />
       </AnimateIcon>
     </div>

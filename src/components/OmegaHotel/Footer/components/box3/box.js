@@ -1,7 +1,10 @@
 import React from 'react';
 
 // Shared components
-import { AnimateTypography, AnimateIcon, CircleWithNumber } from '../index';
+// Shared components
+import Selector from '../../../Animations/Selector';
+import AnimateTypography from '../../../Animations/Typography';
+import AnimateIcon from '../../../Animations/Icon';
 
 // Component styles
 import styles from './styles';
@@ -14,27 +17,28 @@ const Box3 = props => {
       <div className={classes.title}>
         <AnimateTypography
           effect='slideUp'
-          delay={1300}
+          delay={3450}
+          duration={800}
           text='Guests'
           variant='h5'
         />
       </div>
 
       <div className={classes.body}>
-        <AnimateIcon effect='slideUp' delay={1400}>
-          <CircleWithNumber variant='contained' text={1} />
+        <AnimateIcon effect='slideUp' delay={3500}>
+          <Selector variant='contained' text={1} />
         </AnimateIcon>
 
-        <AnimateIcon effect='slideUp' delay={1500}>
-          <CircleWithNumber text={2} />
+        <AnimateIcon effect='slideUp' delay={3550}>
+          <Selector text={2} />
         </AnimateIcon>
 
-        <AnimateIcon effect='slideUp' delay={1600}>
-          <CircleWithNumber text={3} />
+        <AnimateIcon effect='slideUp' delay={3600}>
+          <Selector text={3} />
         </AnimateIcon>
 
-        <AnimateIcon effect='slideUp' delay={1600}>
-          <CircleWithNumber text='4+' />
+        <AnimateIcon effect='slideUp' delay={3650}>
+          <Selector text='4+' />
         </AnimateIcon>
       </div>
     </div>

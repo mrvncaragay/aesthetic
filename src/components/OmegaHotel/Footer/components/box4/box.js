@@ -4,7 +4,8 @@ import React from 'react';
 import ArrowRight from '@material-ui/icons/ArrowRightOutlined';
 
 // Shared components
-import { AnimateTypography, AnimateIcon } from '../index';
+import AnimateIcon from '../../../Animations/Icon';
+import AnimateTypography from '../../../Animations/Typography';
 
 // Component styles
 import styles from './styles';
@@ -18,7 +19,8 @@ const Box4 = props => {
         <AnimateTypography
           effect='slideUp'
           text='Arrival and departure'
-          delay={1400}
+          delay={3550}
+          duration={800}
           variant='h5'
         />
       </div>
@@ -27,7 +29,8 @@ const Box4 = props => {
         <AnimateTypography
           effect='slideUp'
           text='09.20.19 -'
-          delay={1400}
+          delay={3550}
+          duration={800}
           variant='h4'
           display='inline'
         />
@@ -35,12 +38,13 @@ const Box4 = props => {
         <AnimateTypography
           effect='slideUp'
           text='09.25.19'
-          delay={1500}
+          delay={3700}
+          duration={800}
           variant='h4'
           display='inline'
         />
 
-        <AnimateIcon effect='slideRight' delay={1600}>
+        <AnimateIcon effect='slideRight' delay={3700} duration={800}>
           <ArrowRight />
         </AnimateIcon>
       </div>

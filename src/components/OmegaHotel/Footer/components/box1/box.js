@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import styles from './styles';
 
 // Shared components
-import { AnimateTypography } from '../index';
+import AnimateTypography from '../../../Animations/Typography';
 
 const Box1 = props => {
   const classes = styles(props);
@@ -17,7 +17,8 @@ const Box1 = props => {
         <AnimateTypography
           effect='slideUp'
           text='Your'
-          delay={1200}
+          delay={3200}
+          duration={800}
           display='inline'
           variant='h4'
         />
@@ -25,7 +26,8 @@ const Box1 = props => {
         <AnimateTypography
           effect='slideUp'
           text='room'
-          delay={1400}
+          delay={3400}
+          duration={800}
           display='inline'
           variant='h4'
         />
@@ -35,14 +37,16 @@ const Box1 = props => {
         <AnimateTypography
           effect='slideUp'
           text='Select the desired filters'
-          delay={1200}
+          delay={3200}
+          duration={800}
           variant='h5'
         />
 
         <AnimateTypography
           effect='slideUp'
           text='and find out the price.'
-          delay={1400}
+          delay={3400}
+          duration={800}
           variant='h5'
         />
       </div>

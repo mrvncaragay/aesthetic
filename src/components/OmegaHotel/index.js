@@ -20,8 +20,8 @@ const OmegaHotel = () => {
   useChain([columnBarRef, textRef], [0, 0.5]);
   return (
     <>
-      {/* <ColumnBar />
-      <IntroText /> */}
+      <ColumnBar />
+      <IntroText />
       <Nav />
       <Body />
       <Footer />

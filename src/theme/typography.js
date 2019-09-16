@@ -4,7 +4,6 @@ export default {
   fontFamily: ['Raleway', 'Helvetica', 'sans-serif'].join(','),
 
   h3: {
-    color: palette.common.white,
     fontWeight: '500',
     fontSize: '16px',
     letterSpacing: '3px',

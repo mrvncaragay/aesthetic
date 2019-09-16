@@ -22,8 +22,6 @@ const Footer = () => {
       <Box4 />
       <Box5 />
       <Box6 />
-      {/* <Box title='Icon' />
-      <Box title='Book Now' /> */}
     </div>
   );
 };
