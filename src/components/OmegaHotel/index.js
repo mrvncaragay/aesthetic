@@ -7,7 +7,6 @@ import {
 import { useChain } from 'react-spring';
 
 // Shared component
-import ColumnBar from './ColumnBar';
 import IntroText from './IntroText';
 import Nav from './Nav';
 import Body from './Body';
@@ -22,9 +21,7 @@ const OmegaHotel = () => {
   return (
     <>
       <RectBar />
-
-      {/* <ColumnBar />
-      <IntroText />*/}
+      <IntroText />
       <Nav />
       <Body />
       <Footer />

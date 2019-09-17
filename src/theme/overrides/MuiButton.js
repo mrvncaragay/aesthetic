@@ -7,6 +7,15 @@ export default {
     marginRight: '16px'
   },
 
+  text: {
+    textTransform: 'none',
+    letterSpacing: '0.8px',
+    fontWeight: '500',
+    fontSize: '14px',
+    lineHeight: '24px',
+    color: 'white'
+  },
+
   outlined: {
     backgroundColor: palette.text.primary,
     letterSpacing: '0.15em',

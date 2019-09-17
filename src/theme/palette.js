@@ -5,7 +5,10 @@ export default {
     white
   },
 
-  text: {},
+  text: {
+    active: 'white',
+    inactive: '#565557'
+  },
 
   omegaHotel: {
     main: '#6D909A',

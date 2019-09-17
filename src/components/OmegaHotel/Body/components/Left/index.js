@@ -1,21 +1,21 @@
 import React from 'react';
 
 // Shared component
-import Left from './components/Left';
-import Right from './components/Right';
+import LeftTop from '../LeftTop';
+import LeftBottom from '../LeftBottom';
 
 // Component styles
 import styles from './styles';
 
-const Body = () => {
+const Left = () => {
   const classes = styles();
 
   return (
     <div className={classes.root}>
-      <Left />
-      <Right />
+      <LeftTop />
+      <LeftBottom />
     </div>
   );
 };
 
-export default Body;
+export default Left;
