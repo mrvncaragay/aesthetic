@@ -9,8 +9,6 @@ export default makeStyles(theme => ({
   },
 
   control: {
-    border: '1px solid gray',
-
     '& h4': {
       color: 'black'
     }

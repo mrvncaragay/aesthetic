@@ -21,11 +21,12 @@ const BigText = () => {
   return (
     <div className={classes.root}>
       <div className={classes.heading}>
-        <Typography variant='h4'>24 free hotel rooms</Typography>
+        <Typography variant='h5'>24 free hotel rooms</Typography>
       </div>
 
       <div className={classes.body}>
-        <p>Book your stay dsda dsads sadsadsadsadasdsa asasdsadsad</p>
+        <Typography variant='h2'>Book your stay</Typography>
+        <Typography variant='h2'>at the hotel.</Typography>
       </div>
     </div>
   );

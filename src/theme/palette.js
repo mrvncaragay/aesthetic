@@ -7,7 +7,7 @@ export default {
 
   text: {
     active: 'white',
-    inactive: '#565557'
+    inactive: '#132129'
   },
 
   omegaHotel: {

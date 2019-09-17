@@ -4,6 +4,7 @@ export default makeStyles(theme => ({
   root: {
     flex: 2,
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    position: 'relative'
   }
 }));

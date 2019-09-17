@@ -12,13 +12,12 @@ export default makeStyles(theme => ({
     margin: theme.spacing(0.6),
     color: 'black',
     padding: '1px',
-
-    width: '15%',
+    width: '5%',
     backgroundColor: 'white',
-    transition: 'width 500ms ease-in-out',
+    transition: 'width 300ms ease-in-out',
 
     '&:hover': {
-      width: '30%'
+      width: '10%'
     }
   }
 }));

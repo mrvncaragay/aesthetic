@@ -5,6 +5,6 @@ export default makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     height: '100vh',
-    backgroundColor: '#6D909A'
+    backgroundColor: '#146982'
   }
 }));

@@ -3,6 +3,14 @@ import palette from './palette';
 export default {
   fontFamily: ['Raleway', 'Helvetica', 'sans-serif'].join(','),
 
+  h2: {
+    fontWeight: '800',
+    fontSize: '48px',
+    letterSpacing: '2px',
+    textTransform: 'none',
+    lineHeight: '50px'
+  },
+
   h3: {
     fontWeight: '500',
     fontSize: '16px',
