@@ -8,6 +8,7 @@ import styles from './styles';
 
 const AnimateTypography = ({
   effect = '',
+  exit = '',
   className = '',
   text,
   delay,
@@ -23,12 +24,16 @@ const AnimateTypography = ({
   });
 
   return (
-    <Typography
-      className={`${classes[effect]} ${className} ${animate ? ' animate' : ''}`}
-      {...props}
-    >
-      {text}
-    </Typography>
+    <div className={classes.container}>
+      <Typography
+        className={`${classes[effect]} ${className} ${
+          animate ? ' animate' : ''
+        }`}
+        {...props}
+      >
+        {text}
+      </Typography>
+    </div>
   );
 };
 

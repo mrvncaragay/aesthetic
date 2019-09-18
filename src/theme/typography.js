@@ -8,7 +8,8 @@ export default {
     fontSize: '48px',
     letterSpacing: '2px',
     textTransform: 'none',
-    lineHeight: '50px'
+    lineHeight: '60px',
+    color: 'white'
   },
 
   h3: {

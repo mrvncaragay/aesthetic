@@ -14,9 +14,13 @@ export default makeStyles(theme => ({
     padding: '1px',
     width: '5%',
     backgroundColor: 'white',
-    transition: 'width 300ms ease-in-out',
+    transition: 'all 300ms ease-in-out',
 
     '&:hover': {
+      width: '10%'
+    },
+
+    '&.active': {
       width: '10%'
     }
   }

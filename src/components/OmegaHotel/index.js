@@ -1,8 +1,8 @@
 import React, { useContext, useRef } from 'react';
-import {
-  IntroBarContext,
-  IntroTextContext
-} from '../../context/OmegaHotelContext';
+// import {
+//   IntroBarContext,
+//   IntroTextContext
+// } from '../../context/OmegaHotelContext';
 
 import { useChain } from 'react-spring';
 
@@ -14,17 +14,17 @@ import Footer from './Footer';
 import RectBar from './RectBar';
 
 const OmegaHotel = () => {
-  const { columnBarRef } = useContext(IntroBarContext);
-  const { textRef } = useContext(IntroTextContext);
+  // const { columnBarRef } = useContext(IntroBarContext);
+  // const { textRef } = useContext(IntroTextContext);
 
-  useChain([columnBarRef, textRef], [0, 0.5]);
+  // useChain([columnBarRef, textRef], [0, 0.5]);
   return (
     <>
-      <RectBar />
-      <IntroText />
-      <Nav />
+      {/* <RectBar /> */}
+      {/* <IntroText /> */}
+      {/* <Nav /> */}
       <Body />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
