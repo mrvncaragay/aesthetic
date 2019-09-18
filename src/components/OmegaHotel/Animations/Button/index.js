@@ -1,22 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-// Material UI components
-import IconButton from '@material-ui/core/IconButton';
-
 // Component styles
 import styles from './styles';
 
-export const AnimateButton = ({
-  component: Component,
-  children,
-  effect = '',
-  className = '',
-  delay,
-  ...props
-}) => {
+export const AnimateButton = ({ children, effect = '', delay, ...props }) => {
   const classes = styles(props);
   const [animate, setAnimate] = useState(false);
-  const effectClassName = `${effect}Icon`;
+  const effectClassName = `${effect}`;
 
   useEffect(() => {
     setTimeout(() => {
@@ -25,14 +15,12 @@ export const AnimateButton = ({
   });
 
   return (
-    <Component
-      className={`${classes[effectClassName]} ${className} ${
-        animate ? ' animate' : ''
-      }`}
+    <div
+      className={`${classes[effectClassName]} ${animate ? ' animate' : ''}`}
       {...props}
     >
       {children}
-    </Component>
+    </div>
   );
 };
 

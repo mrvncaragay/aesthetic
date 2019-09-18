@@ -4,6 +4,9 @@ import { OmegaHotelActionContext } from '../../../../../context/OmegaHotelContex
 // Material UI component
 import Divider from '@material-ui/core/Divider';
 
+// Animateion component
+import AnimateButton from '../../../Animations/Button';
+
 // Component styles
 import styles from './styles';
 
@@ -20,12 +23,13 @@ const Tabs = () => {
 
   for (let i = 0; i < 4; i++) {
     lineButtons.push(
-      <Divider
-        key={i}
-        variant='middle'
-        className={classes.line + ` ${state === i ? 'active' : ''}`}
-        onClick={() => handleClick(i)}
-      />
+      <AnimateButton key={i} effect='fadeInGrow' delay={4000} duration={1300}>
+        <Divider
+          variant='middle'
+          className={classes.line + ` ${state === i ? 'active' : ''}`}
+          onClick={() => handleClick(i)}
+        />
+      </AnimateButton>
     );
   }
 
