@@ -23,7 +23,7 @@ export default makeStyles(theme => ({
 
   exitSlideDown: {
     top: 0,
-    transition: props => theme.transition.main(props.leave),
+    transition: props => theme.transition.leave(props.leave),
 
     '&.animate': {
       top: props => `${props.top}px`

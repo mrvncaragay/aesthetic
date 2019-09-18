@@ -19,6 +19,7 @@ const BigText = () => {
   } = state;
 
   const [sloganIndex, setSloganIndex] = useState(index);
+  const [speed, setSpeed] = useState(0);
 
   /* eslint-disable */
   useEffect(() => {
@@ -27,8 +28,9 @@ const BigText = () => {
     if (next) {
       hiddenClassTimer = setTimeout(() => {
         setSloganIndex(index);
+        setSpeed(600)
         dispatch({ type: 'RESET_NEXT' });
-      }, 300);
+      }, 800);
     }
 
     return () => {
@@ -40,8 +42,8 @@ const BigText = () => {
   return (
     <div className={classes.root}>
       <AnimateTypography
-        delay={600}
-        duration={1000}
+        delay={speed || 2800}
+        duration={500}
         text='24 free hotel rooms.'
         effect='slideDown'
         variant='h5'
@@ -50,9 +52,9 @@ const BigText = () => {
 
       <AnimateTypography
         key={`${sloganIndex}t1`}
-        delay={600}
-        duration={1000}
-        leave={300} // needs a delay for this
+        delay={speed || 2800}
+        duration={800}
+        leave={400}
         text={texts[sloganIndex].t1}
         effect={next ? 'exitSlideDown' : 'slideDown'}
         variant='h2'
@@ -61,9 +63,9 @@ const BigText = () => {
 
       <AnimateTypography
         key={`${sloganIndex}t2`}
-        delay={900}
-        duration={1000}
-        leave={500}
+        delay={speed ? speed + 200 : 3000}
+        duration={800}
+        leave={600}
         text={texts[sloganIndex].t2}
         effect={next ? 'exitSlideDown' : 'slideDown'}
         variant='h2'

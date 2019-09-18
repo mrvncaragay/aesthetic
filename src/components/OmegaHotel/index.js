@@ -20,11 +20,11 @@ const OmegaHotel = () => {
   // useChain([columnBarRef, textRef], [0, 0.5]);
   return (
     <>
-      {/* <RectBar /> */}
+      <RectBar />
       {/* <IntroText /> */}
-      {/* <Nav /> */}
+      <Nav />
       <Body />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
