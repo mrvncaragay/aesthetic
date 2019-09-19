@@ -1,3 +1,11 @@
-const bar = Array.from({length: 6}, item => item.name = 'dsa');
+const a = {
+  b: {
+    c: 1
+  },
 
-console.log(bar)
+  d: function(){
+    return this.b
+  } 
+}
+
+console.log(a.d())

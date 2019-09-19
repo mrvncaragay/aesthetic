@@ -26,7 +26,7 @@ const AnimateTypography = ({
   return (
     <div className={classes.container}>
       <Typography
-        className={`${classes[effect]} ${className} ${
+        className={`${classes.root} ${classes[effect]} ${className} ${
           animate ? ' animate' : ''
         }`}
         {...props}

@@ -17,13 +17,15 @@ const Tabs = () => {
   const lineButtons = [];
 
   const handleClick = index => {
-    dispatch({ type: 'NEXT', payload: index });
+    if (state === index) return;
+
+    dispatch({ type: 'NEXT_INDEX', payload: index });
     setState(index);
   };
 
   for (let i = 0; i < 4; i++) {
     lineButtons.push(
-      <AnimateButton key={i} effect='fadeInGrow' delay={4000} duration={1300}>
+      <AnimateButton key={i} effect='fadeInGrow' delay={1000} duration={1300}>
         <Divider
           variant='middle'
           className={classes.line + ` ${state === i ? 'active' : ''}`}
@@ -37,3 +39,4 @@ const Tabs = () => {
 };
 
 export default Tabs;
+//delay={4000}

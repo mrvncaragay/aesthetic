@@ -12,8 +12,8 @@ const LeftTop = () => {
 
   return (
     <div className={classes.root}>
-      <Tabs />
       <BigText />
+      <Tabs />
     </div>
   );
 };

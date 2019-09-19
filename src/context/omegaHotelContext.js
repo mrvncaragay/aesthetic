@@ -5,44 +5,8 @@ import omegaReducer from '../reducers/omegaHotel';
 import barHooks from '../components/OmegaHotel/ColumnBar/transitions';
 import textHooks from '../components/OmegaHotel/IntroText/transitions';
 
-// INITIAL DATA
-const INITIAL_STATE = {
-  tourist: {
-    texts: [
-      {
-        t1: 'Book your stay',
-        t2: 'at the hotel.'
-      },
-
-      {
-        t1: 'The best beds,',
-        t2: 'magic sleep.'
-      },
-
-      {
-        t1: 'Share a Grand',
-        t2: 'Experience.'
-      },
-
-      {
-        t1: "New Yor's standard for",
-        t2: 'luxury and privacy.'
-      }
-    ],
-
-    images: [
-      'http://dq5r178u4t83b.cloudfront.net/wp-content/uploads/sites/28/2016/11/24091523/New-Luxury-Room.jpg'
-    ]
-  },
-
-  business: {
-    texts: [],
-    images: []
-  },
-
-  index: 0,
-  next: false
-};
+// INITIAL DATA Test Data
+import data from '../components/OmegaHotel/data';
 
 export const IntroBarContext = createContext();
 export const IntroTextContext = createContext();
@@ -53,7 +17,7 @@ export function OmegaHotelProvider(props) {
   const [barTransition, columnBarRef, isAnimating] = barHooks();
   const [textTransition, textRef] = textHooks();
 
-  const [state, dispatch] = useReducer(omegaReducer, INITIAL_STATE);
+  const [state, dispatch] = useReducer(omegaReducer, data);
 
   return (
     <OmegaHotelContext.Provider value={state}>

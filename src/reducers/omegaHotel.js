@@ -1,16 +1,25 @@
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'NEXT':
+    case 'NEXT_CATEGORY': {
       return {
         ...state,
-        next: true,
+        nextCategory: true,
+        category: action.payload
+      };
+    }
+
+    case 'NEXT_INDEX':
+      return {
+        ...state,
+        nextIndex: true,
         index: action.payload
       };
 
-    case 'RESET_NEXT':
+    case 'RESET':
       return {
         ...state,
-        next: false
+        nextCategory: false,
+        nextIndex: false
       };
 
     default:

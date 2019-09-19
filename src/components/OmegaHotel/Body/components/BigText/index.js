@@ -10,35 +10,46 @@ import styles from './styles';
 
 const BigText = () => {
   const classes = styles();
-
   const state = useContext(OmegaHotelContext);
   const dispatch = useContext(OmegaHotelActionContext);
-  const { index, next } = state;
-  const {
-    tourist: { texts }
-  } = state;
 
-  const [sloganIndex, setSloganIndex] = useState(index);
+  const { index, nextIndex, nextCategory, category } = state;
+
+  const [slogan, setSlogan] = useState(state[category].texts[index]);
   const [speed, setSpeed] = useState(0);
+  const [animationClass, setAnimationClass] = useState('slideDown');
 
   /* eslint-disable */
   useEffect(() => {
     let hiddenClassTimer = null;
+   
+    if (nextIndex) {
+      setAnimationClass('exitSlideDown');  // animate before removing
 
-    if (next) {
       hiddenClassTimer = setTimeout(() => {
-        setSloganIndex(index);
-        setSpeed(600)
-        dispatch({ type: 'RESET_NEXT' });
+        setSlogan(state[category].texts[index])
+        setAnimationClass('slideDown')
+        dispatch({ type: 'RESET' });
+        setSpeed(600) //speed for new component
       }, 800);
     }
+
+    if (nextCategory) {
+      setAnimationClass('exitSlideRight'); // animate before removing
+
+      hiddenClassTimer = setTimeout(() => {
+        setSlogan(state[category].texts[index]); // new component
+        setAnimationClass('enterSlideRight');
+        dispatch({ type: 'RESET' });
+      }, 1200);
+    } 
 
     return () => {
       clearTimeout(hiddenClassTimer);
     };
-  }, [next]);
+  }, [nextIndex, nextCategory]);
   /* eslint-enable */
-
+  console.log(index, category);
   return (
     <div className={classes.root}>
       <AnimateTypography
@@ -51,26 +62,26 @@ const BigText = () => {
       />
 
       <AnimateTypography
-        key={`${sloganIndex}t1`}
-        delay={speed || 2800}
+        key={`${slogan.id}`}
+        delay={speed || 0} //2800}
         duration={800}
         leave={400}
-        text={texts[sloganIndex].t1}
-        effect={next ? 'exitSlideDown' : 'slideDown'}
+        text={slogan.t1}
+        effect={animationClass}
         variant='h2'
         top={60}
       />
 
-      <AnimateTypography
+      {/* <AnimateTypography
         key={`${sloganIndex}t2`}
         delay={speed ? speed + 200 : 3000}
         duration={800}
         leave={600}
-        text={texts[sloganIndex].t2}
-        effect={next ? 'exitSlideDown' : 'slideDown'}
+        text={slogan[sloganIndex].t2}
+        effect={animationClass}
         variant='h2'
         top={60}
-      />
+      /> */}
     </div>
   );
 };
