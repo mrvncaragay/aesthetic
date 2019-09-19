@@ -22,7 +22,7 @@ const OmegaHotel = () => {
     <>
       {/* <RectBar /> */}
       {/* <IntroText /> */}
-      {/* <Nav /> */}
+      <Nav />
       <Body />
       {/* <Footer /> */}
     </>

@@ -7,6 +7,7 @@ export default makeStyles(theme => ({
     marginLeft: '30%',
     width: '600px',
     position: 'absolute',
+    zIndex: 1,
     flexDirection: 'column',
     justifyContent: 'center'
   }

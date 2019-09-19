@@ -27,7 +27,8 @@ export default {
     ],
 
     images: [
-      'http://dq5r178u4t83b.cloudfront.net/wp-content/uploads/sites/28/2016/11/24091523/New-Luxury-Room.jpg'
+      'http://dq5r178u4t83b.cloudfront.net/wp-content/uploads/sites/28/2016/11/24091523/New-Luxury-Room.jpg',
+      'https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/133/2018/11/17101324/Luxury-King1.jpg'
     ]
   },
 
