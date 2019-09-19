@@ -22,26 +22,24 @@ const BigText = () => {
   /* eslint-disable */
   useEffect(() => {
     let hiddenClassTimer = null;
-   
-    if (nextIndex) {
-      setAnimationClass('exitSlideDown');  // animate before removing
 
-      hiddenClassTimer = setTimeout(() => {
-        setSlogan(state[category].texts[index])
-        setAnimationClass('slideDown')
+    const animateConfig = (before, after, delay) => {
+      setAnimationClass(before); // animate before removing
+
+      return setTimeout(() => {
+        setSlogan(state[category].texts[index]) // new component
+        setAnimationClass(after) // animate
         dispatch({ type: 'RESET' });
         setSpeed(600) //speed for new component
-      }, 800);
+      }, delay);
+    }
+   
+    if (nextIndex) {
+      hiddenClassTimer = animateConfig('exitSlideDown', 'slideDown', 800)
     }
 
     if (nextCategory) {
-      setAnimationClass('exitSlideRight'); // animate before removing
-
-      hiddenClassTimer = setTimeout(() => {
-        setSlogan(state[category].texts[index]); // new component
-        setAnimationClass('enterSlideRight');
-        dispatch({ type: 'RESET' });
-      }, 1200);
+      hiddenClassTimer = animateConfig('exitSlideRight', 'enterSlideRight', 650);   
     } 
 
     return () => {
@@ -49,7 +47,7 @@ const BigText = () => {
     };
   }, [nextIndex, nextCategory]);
   /* eslint-enable */
-  console.log(index, category);
+
   return (
     <div className={classes.root}>
       <AnimateTypography
@@ -62,8 +60,8 @@ const BigText = () => {
       />
 
       <AnimateTypography
-        key={`${slogan.id}`}
-        delay={speed || 0} //2800}
+        key={`${slogan.id}t1`}
+        delay={speed || 2800}
         duration={800}
         leave={400}
         text={slogan.t1}
@@ -72,16 +70,16 @@ const BigText = () => {
         top={60}
       />
 
-      {/* <AnimateTypography
-        key={`${sloganIndex}t2`}
+      <AnimateTypography
+        key={`${slogan.id}t2`}
         delay={speed ? speed + 200 : 3000}
         duration={800}
         leave={600}
-        text={slogan[sloganIndex].t2}
+        text={slogan.t2}
         effect={animationClass}
         variant='h2'
         top={60}
-      /> */}
+      />
     </div>
   );
 };

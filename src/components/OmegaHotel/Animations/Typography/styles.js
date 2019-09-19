@@ -3,7 +3,8 @@ import { makeStyles } from '@material-ui/styles';
 export default makeStyles(theme => ({
   root: {
     top: '0px',
-    left: '0px'
+    left: '0px',
+    opacity: 1
   },
 
   slideUp: {
@@ -28,7 +29,7 @@ export default makeStyles(theme => ({
 
   exitSlideDown: {
     top: '0px',
-    transition: props => theme.transition.leave(props.leave),
+    transition: props => theme.transition.leave(400, props.leave),
 
     '&.animate': {
       top: props => `${props.top}px`
@@ -37,9 +38,11 @@ export default makeStyles(theme => ({
 
   exitSlideRight: {
     left: 0,
-    transition: props => theme.transition.leave(props.leave),
+    opacity: 1,
+    transition: props => theme.transition.leave(800, props.leave - 350),
 
     '&.animate': {
+      opacity: 0,
       left: 600
     }
   },
