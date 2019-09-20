@@ -22,7 +22,7 @@ export default {
   h4: {
     color: palette.common.white,
     fontWeight: '500',
-    fontSize: '14px',
+    fontSize: '12px',
     lineHeight: '24px'
   },
 

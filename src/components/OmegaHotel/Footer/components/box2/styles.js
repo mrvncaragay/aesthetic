@@ -5,7 +5,11 @@ export default makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    width: '18.4%'
+    width: '18.4%',
+
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    }
   },
 
   title: {

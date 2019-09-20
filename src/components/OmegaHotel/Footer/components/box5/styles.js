@@ -5,6 +5,10 @@ export default makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     height: '100%',
-    width: '8%'
+    width: '8%',
+
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    }
   }
 }));

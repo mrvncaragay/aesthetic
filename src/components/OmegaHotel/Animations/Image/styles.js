@@ -16,7 +16,11 @@ export default makeStyles(theme => ({
     top: '0px',
     position: 'relative',
     backgroundImage: props => `url(${props.url})`,
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
+
+    [theme.breakpoints.down('sm')]: {
+      backgroundSize: 'cover'
+    }
   },
 
   growWidth: {

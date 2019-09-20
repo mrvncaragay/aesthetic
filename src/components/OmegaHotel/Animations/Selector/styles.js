@@ -30,12 +30,21 @@ export default makeStyles(theme => ({
 
     '& $circle.animate': {
       width: '30px',
-      height: '30px'
+      height: '30px',
+
+      [theme.breakpoints.down('sm')]: {
+        width: '20px',
+        height: '20px'
+      }
     },
 
     '& h4': {
       position: 'absolute',
-      color: 'black'
+      color: 'black',
+
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '12px'
+      }
     }
   },
 

@@ -5,12 +5,10 @@ export default makeStyles(theme => ({
     flex: 1,
     display: 'flex',
     alignItems: 'center',
-    overflow: 'hidden'
-  },
+    overflow: 'hidden',
 
-  control: {
-    '& h4': {
-      color: 'black'
+    '& button': {
+      paddingLeft: 0
     }
   },
 

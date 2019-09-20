@@ -30,7 +30,7 @@ const LeftBottom = () => {
             className={classes[active ? 'active' : 'inactive']}
             onClick={() => handleActive(true, 'tourist')}
           >
-            For tourist
+            Tourist
           </Button>
         </AnimateButton>
 
@@ -39,7 +39,7 @@ const LeftBottom = () => {
             className={classes[active ? 'inactive' : 'active']}
             onClick={() => handleActive(false, 'business')}
           >
-            For business
+            Business
           </Button>
         </AnimateButton>
       </>

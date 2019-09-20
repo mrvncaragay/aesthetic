@@ -5,7 +5,11 @@ export default makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     padding: theme.spacing(6, 12, 6, 12),
-    color: 'white'
+    color: 'white',
+
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.spacing(3, 2, 3, 2)
+    }
   },
 
   title: {
@@ -15,7 +19,15 @@ export default makeStyles(theme => ({
   list: {
     width: '250px',
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+
+    [theme.breakpoints.down('sm')]: {
+      width: '100px',
+
+      '& $search, $button': {
+        display: 'none'
+      }
+    }
   },
 
   button: {

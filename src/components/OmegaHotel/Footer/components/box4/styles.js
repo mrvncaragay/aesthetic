@@ -7,7 +7,11 @@ export default makeStyles(theme => ({
     justifyContent: 'center',
     height: '100%',
     width: '18.4%',
-    color: 'white'
+    color: 'white',
+
+    [theme.breakpoints.down('sm')]: {
+      width: '40%'
+    }
   },
 
   title: {
@@ -21,7 +25,11 @@ export default makeStyles(theme => ({
   body: {
     '& h4': {
       position: 'relative',
-      marginRight: theme.spacing(0.5)
+      marginRight: theme.spacing(0.5),
+
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '12px'
+      }
     }
   }
 }));

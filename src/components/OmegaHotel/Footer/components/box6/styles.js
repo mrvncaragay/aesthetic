@@ -6,7 +6,11 @@ export default makeStyles(theme => ({
 
     '& h3': {
       fontWeight: 600,
-      position: 'relative'
+      position: 'relative',
+
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '12px'
+      }
     }
   },
 
@@ -27,7 +31,11 @@ export default makeStyles(theme => ({
     '& h5': {
       color: 'black',
       position: 'relative',
-      lineHeight: '15px'
+      lineHeight: '15px',
+
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '10px'
+      }
     }
   }
 }));

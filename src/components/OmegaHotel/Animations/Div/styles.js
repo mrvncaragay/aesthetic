@@ -16,6 +16,10 @@ export default makeStyles(theme => ({
     '&.animate': {
       opacity: 1,
       backgroundColor: 'white'
+    },
+
+    [theme.breakpoints.down('sm')]: {
+      width: '30%'
     }
   },
 
@@ -27,7 +31,11 @@ export default makeStyles(theme => ({
     backgroundColor: theme.palette.omegaHotel.background,
 
     '&.animate': {
-      animation: '$growShrink 4s ease-in-out'
+      animation: '$growShrink 4s ease-in-out',
+
+      [theme.breakpoints.down('sm')]: {
+        animation: '$growShrinkMobile 4s ease-in-out'
+      }
     }
   },
 
@@ -36,6 +44,15 @@ export default makeStyles(theme => ({
     '15%': { height: '100%' },
     '40%': { height: '100%' },
     '55%': { height: '20.5%' },
+    '90%': { height: '0%' },
+    '100%': { height: '0%' }
+  },
+
+  '@keyframes growShrinkMobile': {
+    '0%': { height: '0%' },
+    '15%': { height: '100%' },
+    '40%': { height: '100%' },
+    '55%': { height: '13.5%' },
     '90%': { height: '0%' },
     '100%': { height: '0%' }
   }

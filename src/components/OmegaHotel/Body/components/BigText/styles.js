@@ -13,6 +13,15 @@ export default makeStyles(theme => ({
 
     '& h5': {
       color: 'white'
+    },
+
+    [theme.breakpoints.down('sm')]: {
+      width: '270px',
+
+      '& h2': {
+        fontSize: '24px',
+        lineHeight: '30px'
+      }
     }
   }
 }));

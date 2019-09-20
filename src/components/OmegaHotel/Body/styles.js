@@ -5,7 +5,11 @@ export default makeStyles(theme => ({
     flex: 1,
     display: 'flex',
     position: 'relative',
-    zIndex: 100,
-    padding: theme.spacing(0, 12, 8, 12)
+    padding: theme.spacing(0, 12, 8, 12),
+
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      padding: theme.spacing(0, 2, 3, 2)
+    }
   }
 }));

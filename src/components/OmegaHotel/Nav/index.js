@@ -31,7 +31,7 @@ const Nav = () => {
           variant='h3'
           effect='enterShrinkLetterSpace'
           text='Omega Hotel'
-          delay={3500}
+          delay={2600}
         />
       </div>
 

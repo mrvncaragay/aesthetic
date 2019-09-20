@@ -21,7 +21,7 @@ export default {
 
       {
         id: 3,
-        t1: "New Yor's standard for",
+        t1: "NY's standard for",
         t2: 'luxury and privacy.'
       }
     ],
@@ -54,7 +54,7 @@ export default {
       {
         id: 4,
         t1: 'Hotel that defines',
-        t2: 'a new name for luxury.'
+        t2: 'luxury.'
       },
 
       {
@@ -71,7 +71,7 @@ export default {
 
       {
         id: 7,
-        t1: 'A legendary welcome,',
+        t1: 'Unforgettable,',
         t2: 'every time.'
       }
     ],
