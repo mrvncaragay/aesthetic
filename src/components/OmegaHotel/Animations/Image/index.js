@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { OmegaHotelContext } from '../../../../context/OmegaHotelContext';
 
 // Component styles
 import styles from './styles';
@@ -13,8 +14,28 @@ const AnimateImage = ({ effect = '', exit = '', delay, ...props }) => {
     }, delay); //3300
   });
 
+  // /* eslint-disable */
+  //   useEffect(() => {
+  //     let hiddenClassTimer = null;
+
+  //     if (nextIndex) {
+  //       setAnimationClass(classes.slideDown)
+
+  //     }
+
+  //     if (nextCategory) {
+
+  //     }
+
+  //     return () => {
+
+  //       clearTimeout(hiddenClassTimer);
+  //     };
+  //   }, [nextIndex, nextCategory]);
+  //   /* eslint-enable */
+
   return (
-    <div className={`${classes.root}`}>
+    <div className={`${classes.root} ${animate ? 'animate' : ''}`}>
       <div
         {...props}
         className={`${classes.backgroundImage} ${classes[effect]}  ${

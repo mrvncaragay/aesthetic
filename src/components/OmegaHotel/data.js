@@ -27,8 +27,25 @@ export default {
     ],
 
     images: [
-      'http://dq5r178u4t83b.cloudfront.net/wp-content/uploads/sites/28/2016/11/24091523/New-Luxury-Room.jpg',
-      'https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/133/2018/11/17101324/Luxury-King1.jpg'
+      {
+        id: 0,
+        url:
+          'http://dq5r178u4t83b.cloudfront.net/wp-content/uploads/sites/28/2016/11/24091523/New-Luxury-Room.jpg'
+      },
+      {
+        id: 1,
+        url:
+          'https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/133/2018/11/17101324/Luxury-King1.jpg'
+      },
+      {
+        id: 2,
+        url: 'https://shanklyhotel.com/wp-content/uploads/2015/08/room-105.jpg'
+      },
+      {
+        id: 3,
+        url:
+          'https://www.ojaivalleyinn.com/application/files/2314/9428/5439/Luxury_Room_3.jpg'
+      }
     ]
   },
 
@@ -62,6 +79,7 @@ export default {
   },
 
   index: 0,
+  prevIndex: 0,
   category: 'tourist',
   nextIndex: false,
   nextCategory: false

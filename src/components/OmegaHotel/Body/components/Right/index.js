@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { OmegaHotelContext } from '../../../../../context/OmegaHotelContext';
-import { OmegaHotelActionContext } from '../../../../../context/OmegaHotelContext';
 
 // Animation component
 import AnimateImage from '../../../Animations/Image';
@@ -12,48 +11,44 @@ const Body = () => {
   const classes = styles();
 
   const state = useContext(OmegaHotelContext);
-  const dispatch = useContext(OmegaHotelActionContext);
+  const { index, prevIndex, nextIndex, nextCategory, category } = state;
 
-  const { index, nextIndex, nextCategory, category } = state;
-
-  const [image, setImage] = useState(state[category].images[index]);
-  const [speed, setSpeed] = useState(0);
-  const [animationClass, setAnimationClass] = useState('growWidth');
+  const [images, setImages] = useState([
+    <AnimateImage
+      key={state[category].images[0].id}
+      delay={800}
+      effect='growWidth'
+      url={state[category].images[0].url}
+    />
+  ]);
 
   /* eslint-disable */
   useEffect(() => {
-    let hiddenClassTimer = null;
-
-    const animateConfig = (before, after, delay) => {
-      setAnimationClass(before); // animate before removing
-
-      return setTimeout(() => {
-        setSlogan(state[category].images[index]) // new component
-        setAnimationClass(after) // animate
-        dispatch({ type: 'RESET' });
-        setSpeed(600) //speed for new component
-      }, delay);
-    }
-   
     if (nextIndex) {
-      hiddenClassTimer = animateConfig('slideDown', '', 800)
+      setImages([
+        <AnimateImage
+          key={state[category].images[index].id + 'as'}
+          delay={500}
+          effect='growWidth'
+          url={state[category].images[index].url}
+        />,
+        <AnimateImage
+          key={state[category].images[prevIndex].id + 'sa'}
+          delay={300}
+          effect='exitSlideDown'
+          url={state[category].images[prevIndex].url}
+        />
+      ]);
     }
 
     if (nextCategory) {
-      hiddenClassTimer = animateConfig('exitSlideRight', 'enterSlideRight', 650);   
-    } 
+    }
 
-    return () => {
-      clearTimeout(hiddenClassTimer);
-    };
-  }, [nextIndex, nextCategory]);
+    return () => {};
+  }, [nextIndex, nextCategory, prevIndex]);
   /* eslint-enable */
-
-  return (
-    <div className={classes.root}>
-      <AnimateImage delay={1000} effect={animationClass} url={image} />
-    </div>
-  );
+  console.log(index, prevIndex, images);
+  return <div className={classes.root}>{images}</div>;
 };
 
 export default Body;
