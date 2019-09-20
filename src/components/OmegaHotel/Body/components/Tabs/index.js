@@ -25,7 +25,12 @@ const Tabs = () => {
 
   for (let i = 0; i < 4; i++) {
     lineButtons.push(
-      <AnimateButton key={i} effect='fadeInGrow' delay={4000} duration={1300}>
+      <AnimateButton
+        key={i}
+        delay={4000}
+        duration={1300}
+        effect='enterFadeInWidth'
+      >
         <Divider
           variant='middle'
           className={classes.line + ` ${state === i ? 'active' : ''}`}

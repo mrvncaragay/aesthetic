@@ -25,7 +25,7 @@ const LeftBottom = () => {
   return (
     <div className={classes.root}>
       <>
-        <AnimateButton effect='fadeIn' delay={4000}>
+        <AnimateButton effect='enterFadeInBottom' delay={4000}>
           <Button
             className={classes[active ? 'active' : 'inactive']}
             onClick={() => handleActive(true, 'tourist')}
@@ -34,7 +34,7 @@ const LeftBottom = () => {
           </Button>
         </AnimateButton>
 
-        <AnimateButton effect='fadeIn' delay={4300}>
+        <AnimateButton effect='enterFadeInBottom' delay={4300}>
           <Button
             className={classes[active ? 'inactive' : 'active']}
             onClick={() => handleActive(false, 'business')}

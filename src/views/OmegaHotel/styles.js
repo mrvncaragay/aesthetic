@@ -6,5 +6,7 @@ export default makeStyles(theme => ({
     flexDirection: 'column',
     height: '100vh',
     backgroundColor: '#146982'
-  }
+  },
+
+  '@global': {}
 }));

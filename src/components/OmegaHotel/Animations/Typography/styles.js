@@ -64,10 +64,21 @@ export default makeStyles(theme => ({
 
   enterSlideRight: {
     left: '-600px',
-    transition: `left 600ms cubic-bezier(0.25, 0.45, 0.45, 0.95)`,
+    transition: theme.transition.slide(),
 
     '&.animate': {
       left: 0
+    }
+  },
+
+  enterShrinkLetterSpace: {
+    letterSpacing: '15px',
+    opacity: 0,
+    transition: theme.transition.main(2000),
+
+    '&.animate': {
+      letterSpacing: '3px',
+      opacity: 1
     }
   },
 

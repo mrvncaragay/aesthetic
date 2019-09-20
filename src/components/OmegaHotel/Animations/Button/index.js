@@ -6,7 +6,6 @@ import styles from './styles';
 export const AnimateButton = ({ children, effect = '', delay, ...props }) => {
   const classes = styles(props);
   const [animate, setAnimate] = useState(false);
-  const effectClassName = `${effect}`;
 
   useEffect(() => {
     setTimeout(() => {
@@ -16,7 +15,7 @@ export const AnimateButton = ({ children, effect = '', delay, ...props }) => {
 
   return (
     <div
-      className={`${classes.root} ${classes[effectClassName]} ${
+      className={`${classes.root} ${classes[effect]} ${
         animate ? ' animate' : ''
       }`}
       {...props}

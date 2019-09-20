@@ -3,5 +3,7 @@ export default {
     `all ${duration}ms cubic-bezier(0.25, 0.45, 0.45, 0.95)`,
 
   leave: (duration = 400, delay = 0) =>
-    `all ${duration}ms cubic-bezier(0.25, 0.45, 0.45, 0.95) ${delay}ms`
+    `all ${duration}ms cubic-bezier(0.25, 0.45, 0.45, 0.95) ${delay}ms`,
+
+  slide: () => `all 600ms cubic-bezier(0.25, 0.45, 0.45, 0.95)`
 };

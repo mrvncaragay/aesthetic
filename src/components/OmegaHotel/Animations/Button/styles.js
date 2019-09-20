@@ -8,19 +8,7 @@ export default makeStyles(theme => ({
     position: 'relative'
   },
 
-  fadeInGrow: {
-    opacity: 0,
-    width: '0%',
-
-    transition: props => theme.transition.main(props.duration),
-
-    '&.animate': {
-      opacity: 1,
-      width: '100%'
-    }
-  },
-
-  fadeIn: {
+  enterFadeInBottom: {
     top: '5%',
     opacity: 0,
 
@@ -29,6 +17,18 @@ export default makeStyles(theme => ({
     '&.animate': {
       opacity: 1,
       top: '0%'
+    }
+  },
+
+  enterFadeInWidth: {
+    opacity: 0,
+    width: `0%`,
+
+    transition: props => theme.transition.main(props.duration),
+
+    '&.animate': {
+      opacity: 1,
+      width: `100%`
     }
   }
 }));
