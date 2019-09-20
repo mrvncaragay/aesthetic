@@ -18,6 +18,21 @@ export default makeStyles(theme => ({
     }
   },
 
+  SlideUpAndDown: {
+    top: '80%',
+
+    '&.animate': {
+      animation: '$suad 1300ms ease-in-out 300ms'
+    }
+  },
+
+  '@keyframes suad': {
+    '0%': { top: '80%' },
+    '30%': { top: '0%' },
+    '60%': { top: '0%' },
+    '100%': { top: '80%' }
+  },
+
   slideDown: {
     top: props => `-${props.top}px`,
     transition: props => theme.transition.main(props.duration),

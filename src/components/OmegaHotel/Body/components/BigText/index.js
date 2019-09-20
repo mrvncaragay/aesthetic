@@ -51,7 +51,7 @@ const BigText = () => {
   return (
     <div className={classes.root}>
       <AnimateTypography
-        delay={speed || 1000} //2800
+        delay={speed || 2800}
         duration={500}
         text='24 free hotel rooms.'
         effect='slideDown'
@@ -61,7 +61,7 @@ const BigText = () => {
 
       <AnimateTypography
         key={`${slogan.id}t1`}
-        delay={speed || 1000} //2800
+        delay={speed || 2800}
         duration={800}
         leave={400}
         text={slogan.t1}
@@ -72,7 +72,7 @@ const BigText = () => {
 
       <AnimateTypography
         key={`${slogan.id}t2`}
-        delay={speed ? speed + 200 : 1000} // 3000
+        delay={speed ? speed + 200 : 3000}
         duration={800}
         leave={600}
         text={slogan.t2}

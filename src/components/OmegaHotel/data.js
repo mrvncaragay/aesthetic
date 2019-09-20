@@ -75,7 +75,28 @@ export default {
         t2: 'every time.'
       }
     ],
-    images: []
+    images: [
+      {
+        id: 0,
+        url:
+          'https://i.pinimg.com/originals/e0/74/a0/e074a03947701c2eaca38ae3e2772f51.jpg'
+      },
+      {
+        id: 1,
+        url:
+          'https://dq5r178u4t83b.cloudfront.net/wp-content/uploads/sites/15/2016/08/30095124/slide_-Boardroom.jpg'
+      },
+      {
+        id: 2,
+        url:
+          'https://www.carolehyder.com/wp-content/uploads/2016/03/conference-room-feng-shui.jpg'
+      },
+      {
+        id: 3,
+        url:
+          'https://www.thephoenician.com/wp-content/uploads/sites/8/2013/03/14_Cactus-Wren_newlogo.jpg'
+      }
+    ]
   },
 
   index: 0,

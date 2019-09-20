@@ -4,7 +4,7 @@ export default makeStyles(theme => ({
   root: {
     overflow: 'hidden',
     justifyContent: 'space-evenly',
-    width: '180px',
+    width: '150px',
     display: 'flex',
     zIndex: 101,
     position: 'fixed',

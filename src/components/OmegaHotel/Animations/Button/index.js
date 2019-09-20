@@ -16,7 +16,9 @@ export const AnimateButton = ({ children, effect = '', delay, ...props }) => {
 
   return (
     <div
-      className={`${classes[effectClassName]} ${animate ? ' animate' : ''}`}
+      className={`${classes.root} ${classes[effectClassName]} ${
+        animate ? ' animate' : ''
+      }`}
       {...props}
     >
       {children}

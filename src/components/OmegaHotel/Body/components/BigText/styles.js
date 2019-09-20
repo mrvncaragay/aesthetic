@@ -9,6 +9,10 @@ export default makeStyles(theme => ({
     position: 'absolute',
     zIndex: 1,
     flexDirection: 'column',
-    justifyContent: 'center'
+    justifyContent: 'center',
+
+    '& h5': {
+      color: 'white'
+    }
   }
 }));

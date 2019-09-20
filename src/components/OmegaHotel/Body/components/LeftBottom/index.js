@@ -4,6 +4,9 @@ import { OmegaHotelActionContext } from '../../../../../context/OmegaHotelContex
 // Material UI component
 import Button from '@material-ui/core/Button';
 
+// Animation component
+import AnimateButton from '../../../Animations/Button';
+
 // Component styles
 import styles from './styles';
 
@@ -21,21 +24,25 @@ const LeftBottom = () => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.control}>
-        <Button
-          className={classes[active ? 'active' : 'inactive']}
-          onClick={() => handleActive(true, 'tourist')}
-        >
-          For tourist
-        </Button>
+      <>
+        <AnimateButton effect='fadeIn' delay={4000}>
+          <Button
+            className={classes[active ? 'active' : 'inactive']}
+            onClick={() => handleActive(true, 'tourist')}
+          >
+            For tourist
+          </Button>
+        </AnimateButton>
 
-        <Button
-          className={classes[active ? 'inactive' : 'active']}
-          onClick={() => handleActive(false, 'business')}
-        >
-          For business
-        </Button>
-      </div>
+        <AnimateButton effect='fadeIn' delay={4300}>
+          <Button
+            className={classes[active ? 'inactive' : 'active']}
+            onClick={() => handleActive(false, 'business')}
+          >
+            For business
+          </Button>
+        </AnimateButton>
+      </>
     </div>
   );
 };

@@ -42,6 +42,8 @@ export default makeStyles(theme => ({
   menu: {
     right: '-15px',
     opacity: 0,
+    paddingLeft: 0,
+    paddingRight: 0,
     transform: 'scale(0.5)',
     transition: 'all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95)',
 

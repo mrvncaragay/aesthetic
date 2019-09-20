@@ -21,13 +21,10 @@ export default makeStyles(theme => ({
 
   growWidth: {
     width: '0%',
-    height: '100%',
-    top: '-200px',
     transition: `all 2500ms cubic-bezier(.09,.55,0,.99)`,
 
     '&.animate': {
-      width: '100%',
-      top: '0px'
+      width: '100%'
     }
   },
 
@@ -46,6 +43,24 @@ export default makeStyles(theme => ({
 
     '&.animate': {
       top: '0px'
+    }
+  },
+
+  enterSlideRight: {
+    left: '-100%',
+    transition: `all 700ms ease-in-out`,
+
+    '&.animate': {
+      left: '0%'
+    }
+  },
+
+  exitSlideRight: {
+    left: '0%',
+    transition: `all 700ms ease-in-out`,
+
+    '&.animate': {
+      left: '100%'
     }
   }
 }));
