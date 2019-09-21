@@ -1,10 +1,10 @@
 ### `Seamless`
 
-Designed by dribbles' professionals implemented by me using React, material UI, HTML, CSS and JavaScript. 
+Designed by dribbles' professionals implemented by me using React, material UI, HTML, CSS and JavaScript.
 
 ### `Motivation`
 
-I want to challenge my self by creating beautiful web pages designed by professionals.
+I want to challenge and improve by creating beautiful and responsive web pages designed by professionals.
 
 ### `Finish Pages`
 

@@ -1,7 +1,5 @@
 import React from 'react';
-
-// Context
-import { OmegaHotelProvider } from './context/OmegaHotelContext';
+import { Route, Switch } from 'react-router-dom';
 
 // Shared Component
 import OmegaHotel from './views/OmegaHotel';
@@ -9,9 +7,9 @@ import OmegaHotel from './views/OmegaHotel';
 const AestheticApp = () => {
   return (
     <>
-      <OmegaHotelProvider>
-        <OmegaHotel />
-      </OmegaHotelProvider>
+      <Switch>
+        <Route exact path='/omegaHotel' component={OmegaHotel} />
+      </Switch>
     </>
   );
 };
