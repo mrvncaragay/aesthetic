@@ -25,26 +25,26 @@ export default {
         t2: 'luxury and privacy.'
       }
     ],
-
     images: [
       {
         id: 0,
         url:
-          'http://dq5r178u4t83b.cloudfront.net/wp-content/uploads/sites/28/2016/11/24091523/New-Luxury-Room.jpg'
+          'https://seamless3313.s3-us-west-1.amazonaws.com/OmegaHotel/Luxury-King1.jpg'
       },
       {
         id: 1,
         url:
-          'https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/133/2018/11/17101324/Luxury-King1.jpg'
+          'https://seamless3313.s3-us-west-1.amazonaws.com/OmegaHotel/room-105.jpg'
       },
       {
         id: 2,
-        url: 'https://shanklyhotel.com/wp-content/uploads/2015/08/room-105.jpg'
+        url:
+          'https://seamless3313.s3-us-west-1.amazonaws.com/OmegaHotel/Luxury_Room_3.jpg'
       },
       {
         id: 3,
         url:
-          'https://www.ojaivalleyinn.com/application/files/2314/9428/5439/Luxury_Room_3.jpg'
+          'https://seamless3313.s3-us-west-1.amazonaws.com/OmegaHotel/Luxury_Room_3.jpg'
       }
     ]
   },
@@ -75,26 +75,27 @@ export default {
         t2: 'every time.'
       }
     ],
+
     images: [
       {
         id: 0,
         url:
-          'https://i.pinimg.com/originals/e0/74/a0/e074a03947701c2eaca38ae3e2772f51.jpg'
+          'https://seamless3313.s3-us-west-1.amazonaws.com/OmegaHotel/conference-room-feng-shui.jpg'
       },
       {
         id: 1,
         url:
-          'https://dq5r178u4t83b.cloudfront.net/wp-content/uploads/sites/15/2016/08/30095124/slide_-Boardroom.jpg'
+          'https://seamless3313.s3-us-west-1.amazonaws.com/OmegaHotel/14_Cactus-Wren_newlogo.jpg'
       },
       {
         id: 2,
         url:
-          'https://www.carolehyder.com/wp-content/uploads/2016/03/conference-room-feng-shui.jpg'
+          'https://seamless3313.s3-us-west-1.amazonaws.com/OmegaHotel/office1.jpg'
       },
       {
         id: 3,
         url:
-          'https://www.thephoenician.com/wp-content/uploads/sites/8/2013/03/14_Cactus-Wren_newlogo.jpg'
+          'https://seamless3313.s3-us-west-1.amazonaws.com/OmegaHotel/slide_-Boardroom.jpg'
       }
     ]
   },

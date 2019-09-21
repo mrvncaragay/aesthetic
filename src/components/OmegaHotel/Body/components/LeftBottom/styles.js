@@ -8,7 +8,9 @@ export default makeStyles(theme => ({
     overflow: 'hidden',
 
     '& button': {
-      paddingLeft: 0
+      [theme.breakpoints.down('sm')]: {
+        paddingLeft: 0
+      }
     }
   },
 
